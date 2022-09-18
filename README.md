@@ -6,7 +6,10 @@
 不能做其他用途！
 请遵守当地的法律法规
 
-使用了 Vant 和Mobx
 请自行npm构建
+#使用了 Vant 和Mobx
+#Vant Weapp
+https://vant-ui.github.io/vant-weapp/#/quickstart
+
 
 
