@@ -1,0 +1,48 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/my/my",
+    "pages/QRcode/QRcode",
+    "pages/logs/logs",
+    "pages/application/application",
+    "components/swiper/swiper"
+    
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "奕辅导",
+    "navigationBarTextStyle":"black"
+  },
+
+
+
+
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#7EC37B",
+    "borderStyle": "black",
+    "list": [
+        {
+            "iconPath": "assets/img/home1.png",
+            "selectedIconPath": "assets/img/home2.png",
+            "pagePath": "pages/index/index",
+            "text": "首页"
+        },
+        {
+            "iconPath": "assets/img/info1.png",
+            "selectedIconPath": "assets/img/info2.png",
+            "pagePath": "pages/logs/logs",
+            "text": "我的班级"
+        },
+        {
+            "iconPath": "assets/img/me1.png",
+            "selectedIconPath": "assets/img/me2.png",
+            "pagePath": "pages/my/my",
+            "text": "我的"
+        }
+    ]
+},
+
+  "sitemapLocation": "sitemap.json"
+}
