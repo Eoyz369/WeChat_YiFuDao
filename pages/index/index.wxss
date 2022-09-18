@@ -1,0 +1,52 @@
+/**index.wxss**/
+page {
+  background-color: #fff;
+  min-height: 100%;
+}
+
+.index,page {
+  width: 100%;
+}
+
+.index .card-swiper swiper-item {
+  left: 0;
+  padding: 0 0 20rpx;
+  width: 100%!important;
+}
+
+.index .card-swiper swiper-item .swiper-item {
+  transform: scale(.9);
+}
+
+.botton_area {
+  bottom: 80rpx;
+  display: flex;
+  left: 50%;
+  position: fixed;
+  transform: translate(-50%,-50%);
+}
+
+.botton_area .botton_item {
+  background: #7EC37B ;
+  border-radius: 48rpx;
+  box-shadow: 0 4px 12px #7EC37B ;
+  color: #fff;
+  font-size: 30rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  margin: 0 10rpx;
+  text-align: center;
+  vertical-align: middle;
+  width: 324rpx;
+}
+
+.botton_area .botton_item image {
+  height: 44rpx;
+  margin-right: 10rpx;
+  vertical-align: middle;
+  width: 44rpx;
+}
+
+.botton_area .botton_item text {
+  vertical-align: middle;
+}
