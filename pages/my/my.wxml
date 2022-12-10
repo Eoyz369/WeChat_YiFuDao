@@ -22,11 +22,11 @@
              
             </view>
             <view bindtap="toEditPerson" class="person">
-                <view class="name">{{userInfo.nickName}}/测试系{{userInfoList.deptName}}</view>
+                <view class="name"  >{{studentName}}/{{collegeConfigs}}</view>
                
                     <view catchtap="changeFold" class="flex-item" style="margin-top: 16rpx;" >
                         <view class="flex-item status">
-                            <view class="tag flex-center">返校{{userStatusList[0].statusDesc}} </view>
+                            <view class="tag flex-center">{{userStatusList[0]}} </view>
 
                             
                         </view>

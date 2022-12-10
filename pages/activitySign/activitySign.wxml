@@ -1,0 +1,28 @@
+<!--pages/activitySign/activitySign.wxml-->
+<view class="wrapper">
+    <view class="g-screenSeach-block">
+        <van-row>
+            <van-col span="5">
+                <view class="screen">
+                    <van-icon class="filterIcon" name="filterIcon" size="24px"></van-icon>
+                    <text class="{{status!=''?'theme-txt':''}}">筛选</text>
+                    <van-dropdown-menu activeColor="#5588F7" class="dropBox">
+                        <van-dropdown-item bind:change="filterChangeWait" options="{{option1}}" value="{{status}}"></van-dropdown-item>
+                    </van-dropdown-menu>
+                </view>
+            </van-col>
+            <van-col offset="1" span="18">
+                <van-search bind:clear="clearWait" bind:search="onSearchWait" placeholder="搜索关键字" value="{{waitIpt}}"></van-search>
+            </van-col>
+        </van-row>
+    </view>
+
+    
+
+    <view class="img" >
+        <image mode="widthFix" src="https://meeting-image-1257318859.cos.ap-beijing.myqcloud.com/htmlImages/yfd/student/Group.png"></image>
+        <view class="text">暂无数据</view>
+    </view>
+</view>
+
+

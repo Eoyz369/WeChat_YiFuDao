@@ -4,3 +4,9 @@
     <text class="log-item">{{index + 1}}. {{log.date}}</text>
   </block>
 </view>
+  <view class="botton_area">
+        <view bindtap="toClearStore" class="botton_item"  >
+            <image src="/assets/img/cc.png"></image>
+            <text>清理缓存</text>
+        </view>
+  </view>

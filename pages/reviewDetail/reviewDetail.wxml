@@ -1,0 +1,150 @@
+<!--pages/reviewDetail/reviewDetail.wxml-->
+<view class="commonWrap">
+
+    <view class="header">
+        <view class="header_state">休假中</view>
+        <view class="header_time">
+            <view>
+                <text class="time">开始时间：</text>
+                <text class="time_text">{{beginTimeFormat}}</text>
+            </view>
+            <view>
+                <text class="time">结束时间：</text>
+                <text class="time_text">{{endTimeFormat}}</text>
+            </view>
+        </view>
+    </view>
+    <view class="form-item alignTop">
+        <view class="label gray-txt">请假类型</view>
+        <view class="stick"> {{askForLeaveConfigs}} </view>
+    </view>
+    <view class="form-item">
+        <view class="label gray-txt">请假总天数</view>
+        <view class="stick"> {{detail.day}} </view>
+    </view>
+    <view class="form-item" >
+        <view class="label gray-txt">是否出校</view>
+        <view class="stick">是</view>
+    </view>
+    <view class="form-item" >
+        <view class="label gray-txt">请假原因</view>
+        <view class="stick"> {{leaveForReason}} </view>
+    </view>
+    <view class="form-item">
+        <view class="label gray-txt">外出地点</view>
+        <view class="stick"> {{location}} </view>
+    </view>
+    <view class="form-item">
+        <view class="label gray-txt">家长是否知情</view>
+        <view class="stick">是</view>
+    </view>
+    <view class="form-item">
+        <view class="label gray-txt">紧急联系电话</view>
+        <view class="stick"> {{parentsPhone}} </view>
+        <van-divider />
+    </view>
+    <view style="display: flex; margin-bottom: 30rpx;">
+      <view style="background-color: lightgray; width: 100%; height: 3rpx;"></view>
+    </view>
+
+<!-- 自己 -->
+    <view class="m-steps-md" >
+    <view class="step" >
+        <view class="m-singleLr-md ">
+            <view class="lt">
+                <view class="hdimgFlex ">
+                    <view class="headImg pass">
+                      <image  src="/assets/img/touxiang.png"></image>
+                    </view>
+                </view>
+                <view class="info">
+                    <view class="name">{{studentName}} <text class="gray-txt className">{{studentClass}}</text>
+                    </view>
+                    <view class="green-txt">发起申请</view>
+                </view>
+            </view>
+            <view class="time">
+                <text class="gray-txt">{{applicationTime}}</text>
+            </view>
+        </view>
+    </view>
+</view>
+<!-- 辅导员 -->
+<view class="m-steps-md " >
+    <view class="step " >
+        <view class="m-singleLr-md ">
+            <view class="lt">
+                <view class="hdimgFlex ">
+                    <view class="headImg pass">
+                      <image  src="/assets/img/touxiang.png"></image>
+                    </view>
+                </view>
+                <view class="info">
+                    <view class="name">{{counselorName}} 
+                    </view>
+                    <view class="green-txt">已通过</view>
+                </view>
+            </view>
+            <view class="time">
+                <text class="gray-txt">{{counselorPassingTime}}</text>
+            </view>
+        </view>
+    </view>
+</view>
+<!-- 主任 -->
+<view class="m-steps-md " >
+    <view class="step " >
+        <view class="m-singleLr-md ">
+            <view class="lt">
+                <view class="hdimgFlex ">
+                    <view class="headImg pass">
+                      <image  src="/assets/img/touxiang.png"></image>
+                    </view>
+                </view>
+                <view class="info">
+                    <view class="name">{{headOfDepartmentName}} 
+                    </view>
+                    <view class="green-txt">已通过</view>
+                </view>
+            </view>
+            <view class="time">
+                <text class="gray-txt">{{headOfDepartmentPassingTime}}</text>
+            </view>
+        </view>
+    </view>
+</view>
+<!-- 学生处 -->
+<view class="m-steps-md " >
+    <view class="step1 " >
+        <view class="m-singleLr-md ">
+            <view class="lt">
+                <view class="hdimgFlex ">
+                    <view class="headImg pass">
+                      <image  src="/assets/img/touxiang.png"></image>
+                    </view>
+                </view>
+                <view class="info">
+                    <view class="name">叶巧
+                    </view>
+                    <view class="green-txt">已通过</view>
+                </view>
+            </view>
+            <view class="time1">
+                <text class="gray-txt">{{PassingTime}}</text>
+            </view>
+        </view>
+    </view>
+</view>
+
+</view>
+
+
+
+
+
+<view class="m-fixedButtom-md">
+    <view class="u-btn-group">
+        <button  class="u-ltBtn-ghost red" >延期申请</button>
+        <button  class="u-btn" >销假</button>
+    </view>
+</view>

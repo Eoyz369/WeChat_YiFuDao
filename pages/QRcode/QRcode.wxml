@@ -1,8 +1,9 @@
 <!--pages/QRcode/QRcode.wxml-->
 
 
-<view class="page" >
-    <view class="now_time" style="color:#7ec37b ;border:2rpx solid #7ec37b"> 
+<view class="page">
+    <view class="ani">
+      <view class="now_time" style="color:#7ec37b ;border:2rpx solid #7ec37b"> 
       <view bindtap="getTime">{{Time}}</view> 
     </view>
 
@@ -17,38 +18,38 @@
     <view class="lists lists_bg">
         <view class="list">
             <view class="list_left">类型</view>
-            <view class="list_right" style="color:#7ec37b">请假-事假</view>
+            <view class="list_right" style="color:#7ec37b">请假-{{askForLeaveConfigs}}</view>
         </view>
         <view class="list">
             <view class="list_left">开始时间</view>
             
-            <view class="list_right">2022-09-12 08:00{{detail.qrCodeOARecord.beginTime}}</view>
+            <view class="list_right">{{beginTimeFormat}}</view>
         </view>
         <view class="list">
             <view class="list_left">结束时间</view>
-            <view class="list_right">2022-09-12 20:00{{detail.qrCodeOARecord.endTime}}</view>
+            <view class="list_right">{{endTimeFormat}}</view>
         </view>
     </view>
     <view class="lists">
         <view class="list">
             <view class="list_left">姓名</view>
-            <view class="list_right">{{detail.qrCodeUserInfo.userName}}</view>
+            <view class="list_right">{{studentName}}</view>
         </view>
         <view class="list">
             <view class="list_left">学院</view>
-            <view class="list_right">{{detail.qrCodeUserInfo.college}}</view>
+            <view class="list_right">{{collegeConfigs}}</view>
         </view>
         <view class="list">
             <view class="list_left">班级</view>
-            <view class="list_right">{{detail.qrCodeUserInfo.classes}}</view>
+            <view class="list_right">{{studentClass}}</view>
         </view>
         <view class="list">
             <view class="list_left">辅导员</view>
-            <view class="list_right">某某某{{detail.qrCodeUserInfo.classesManager}}</view>
+            <view class="list_right">{{counselorName}}</view>
         </view>
         <view class="list">
             <view class="list_left">辅导员电话</view>
-            <view class="list_right">1XXXXXXXXXX{{detail.qrCodeUserInfo.classesManagerPhone}}</view>
+            <view class="list_right">{{counselorPhone}}</view>
         </view>
     </view>
     <view class="tips" style="color:#fff">
@@ -58,5 +59,9 @@
         <view class="p">所有申请除了无返回的离校，逾期状态绿码变灰，其他都是申请结束后绿码变灰。</view>
         <view class="p" style="margin-top:10rpx;">如遇到问题，请拨打班级管理员电话解决。</view>
     </view>
+    </view>
+
+
+  
 </view>
 

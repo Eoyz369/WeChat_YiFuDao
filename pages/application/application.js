@@ -1,51 +1,63 @@
 // pages/application/application.js
-import { createStoreBindings } from 'mobx-miniprogram-bindings'
-import { store } from '../../store/store'
+var util = require('../../utils/util.js');
 
 Page({
 
-  onLoad() {
-    // 绑定 MobX store
-    this.storeBindings = createStoreBindings(this, {
-      store, // 需要绑定的数据仓库
-      fields: ['list'], // 将 this.data.list 绑定为仓库中的 list ，即天气数据
-      actions: ['setList'], // 将 this.setList 绑定为仓库中的 setList action
-    })
-    // 从服务器端读取数据
-    wx.showLoading()
-    getServerData((data) => {
-      wx.hideLoading()
-      // 调用 action ，将数据写入 store
-      this.setList(data)
-    })
-    // wx.showLoading()
-    // wx.request({ // 请求网络数据
-    //   // ...
-    //   success: (data) => {
-    //     wx.hideLoading()
-    //     // 调用 setList action ，将数据写入 store
-    //     this.setList(data)
-    //   }
-    // })
-  },
-  onUnload() {
-    // 解绑
-    this.storeBindings.destroyStoreBindings()
-  },
-
-
-
-
-
-
-
   data: {
 
+    
     // 学院选择
     collegeConfigs:!1,
-    showCollegeType: ['测试'],
+    showCollegeType: [  
+    {
+      id: 0,
+      name: '管理系'
+    },
+    {
+      id: 1,
+      name: '建筑系'
+    },
+    {
+      id: 2,
+      name: '财经系'
+    },
+    {
+      id: 3,
+      name: '信息工程系'
+    },
+    {
+      id: 4,
+      name: '医药健康系'
+    },
+    {
+      id: 5,
+      name: '外语外贸与电子商务系'
+    },
+    {
+      id: 6,
+      name: '教育国际交流部'
+    },
+    {
+      id: 7,
+      name: '测试'
+    },
+  ],
  // 请假类型 
-   showLeaveType: ['事假', '病假', '测试'],
+   showLeaveType:[
+    {
+      id: 0,
+      name: '事假'
+    },
+    {
+      id: 1,
+      name: '病假'
+    },
+    {
+      id: 2,
+      name: '测试'
+    },
+
+  ],
    askForLeaveConfigs: !1,
 
    minHour: 0,
@@ -55,7 +67,7 @@ Page({
   //  开始时间
    showBeginTime: false,
    beginMinDate: new Date().getTime(),
-   beginMaxDate: new Date(2025, 12, 30).getTime(),
+   beginMaxDate: new Date(2031, 12, 30).getTime(),
    beginTimeFormat: '',
   //  minDate: new Date(1990,1,1).getTime(),
   //  beginMaxDate: new Date(2099, 12, 31).getTime(),
@@ -63,7 +75,7 @@ Page({
   // 结束时间
    showEndTime: false,
    endMinDate: new Date().getTime(),
-   endMaxDate: new Date(2025, 12, 30).getTime(),
+   endMaxDate: new Date(2031, 12, 30).getTime(),
    endTimeFormat: '',
 
    disclaimer: !1,
@@ -74,6 +86,15 @@ Page({
 
 
   },
+
+
+
+
+
+
+
+
+
 
   onChangeDisclaimer: function(e) {
     this.setData({
@@ -100,24 +121,63 @@ Page({
 
   // 学院类型 
   showCollegeType: function (e) {
-    console.log(e.detail.value)
-   this.setData({
-    collegeConfigs: e.detail.value
-   })
+
+    var that = this;
+    console.log(e)
+    console.log("选中的name值:"+that.data.showCollegeType[e.detail.value].name);
+    var sss =that.data.showCollegeType[e.detail.value].id;
+    console.log("选中的name值:"+sss)
+    this.setData({
+      collegeConfigs: e.detail.value,
+    })
+    // console.log(JSON.stringify(data));
+    wx.setStorage({
+      key:'col',
+      data:that.data.showCollegeType[e.detail.value].name,
+      // success:function () {
+      //   wx.showToast({
+      //     title: 'title',
+      //   })
+      // }
+    })
+
+
+
   },
+
+
   // 请假类型 
   showPickerType: function (e) {
-    console.log(e.detail.value)
-   this.setData({
-    askForLeaveConfigs: e.detail.value
-   })
+    var that = this;
+    console.log(e)
+    console.log("选中的name值:"+that.data.showLeaveType[e.detail.value].name);
+    var sss =that.data.showLeaveType[e.detail.value].id;
+    console.log("选中的name值:"+sss)
+    this.setData({
+      askForLeaveConfigs: e.detail.value,
+    })
+    // console.log(JSON.stringify(data));
+    wx.setStorage({
+      key:'aFL',
+      data:that.data.showLeaveType[e.detail.value].name,
+      // success:function () {
+      //   wx.showToast({
+      //     title: 'title',
+      //   })
+      // }
+    })
+
   },
+
+
+
   // 开始时间
   showPickerBeginTime() {
     this.setData({ showBeginTime: true })
   },
   onConfirmBeginTime(e) {
-    this.setData({ showBeginTime: false, beginTimeFormat: this.formatDate(new Date(e.detail)) })
+    this.setData({ showBeginTime: false, 
+      beginTimeFormat: this.formatDate(new Date(e.detail)) })
   },
   onCloseBeginTime() {
     this.setData({ showBeginTime: false })
@@ -131,7 +191,10 @@ Page({
   },
   // var e, t = this.data, a =endTimeFormat,b = beginTimeFormat,
   onConfirmEndTime(e) {
-      this.setData({ showEndTime: false, endTimeFormat: this.formatDate(new Date(e.detail)) })
+      this.setData({ 
+        showEndTime: false, 
+        endTimeFormat: this.formatDate(new Date(e.detail)) 
+      })
   },
   onCloseEndTime() {
     this.setData({ showEndTime: false })
@@ -139,6 +202,8 @@ Page({
   onCancelEndTime() {
     this.setData({ showEndTime: false })
   },
+
+
   formatDate(date) {
     let taskStartTime
 // 月
@@ -165,58 +230,94 @@ Page({
     } else {
       taskStartTime += date.getMinutes()
     }
-
     this.setData({
       taskStartTime: taskStartTime,
     })
     return taskStartTime;
   },
-  
-  formSubmit(data) {
-    console.log('form发生了submit事件，携带数据为：', data.detail.value)
-    // <!-- 姓名 -->
-    // <!-- studentName -->
-    var studentName = data.detail.value.studentName
-    // <!-- 选择学院 -->
-    // <!-- collegeConfigs -->
-    var collegeConfigs = data.detail.value.collegeConfigs
-    // <!-- 班级 -->
-    // <!-- studentClass -->
-// <!-- 请假类型 -->
-// <!-- askForLeaveConfigs -->
 
-// <!-- 离校时间 -->
-// <!-- beginTimeFormat -->
-var beginTimeFormat = data.detail.value.beginTimeFormat
-// <!-- 返校时间 -->
-// <!-- endTimeFormat -->
-// <!-- 辅导员姓名 -->
-// <!-- counselorName -->
-// <!-- 辅导员电话 -->
-// <!-- counselorPhone -->
-    var counselorPhone = data.detail.value.counselorName
+  passingTime(e) {
+     
+},
+
+  formSubmit: function (e){
+
+      // 获取某个时间格式的时间戳
+      // 结束时间
+      var stringEndTime =this.data.endTimeFormat;
+      var endTimeString = Date.parse(new Date(stringEndTime));
+        // 开始时间
+        var stringBeginTime = this.data.beginTimeFormat;
+        var beginTimeString = Date.parse(new Date(stringBeginTime));
+        // beginTimeFormat: this.formatDate(new Date(e.detail))
+       var days = (endTimeString - beginTimeString) / 864e5;
+       console.log(days);
+         //  申请时间
+     var applicationTime = (beginTimeString/1000)-3600*3;
+     //  辅导员同意时间
+      var counselorPassingTime = (beginTimeString/1000)-3600*2+360;
+     //  系主任同意时间
+      var headOfDepartmentPassingTime = (beginTimeString/1000)-3600-1080;
+     //  学生处同意时间
+      var PassingTime = this.formatDate(new Date((stringBeginTime/1000)-1800));
+
+
+    console.log(PassingTime);
+  
+
+    var that = this;
+
+  const data = {}
+  // <!-- 姓名 --><!-- studentName -->
+    data.studentName = e.detail.value.studentName
+  // <!-- 选择学院 --><!-- collegeConfigs -->
+    // data.collegeConfigs = this.data.collegeConfigs
+  //   // <!-- 请假类型 --><!-- askForLeaveConfigs -->
+    // data.askForLeaveConfigs = this.data.askForLeaveConfigs.
+    
+    // <!-- 外出地点 --><!-- location -->
+    data.location = e.detail.value.location
+    // <!-- 请假原因 --><!-- leaveForReason -->
+    data.leaveForReason = e.detail.value.leaveForReason
+    // <!-- 班级 -->// <!-- studentClass -->
+    data.studentClass = e.detail.value.studentClass
+    // <!-- 离校时间 -->// <!-- beginTimeFormat -->
+    data.beginTimeFormat = that.data.beginTimeFormat
+    // <!-- 返校时间 -->// <!-- endTimeFormat -->
+    data.endTimeFormat = that.data.endTimeFormat
+    // <!-- 系主任姓名 -->// <!-- headOfDepartmentName -->
+    data.headOfDepartmentName = e.detail.value.headOfDepartmentName
+    
+    // <!-- 辅导员姓名 -->// <!-- counselorName -->
+    data.counselorName = e.detail.value.counselorName
+    // <!-- 辅导员电话 -->// <!-- counselorPhone -->
+    data.counselorPhone = e.detail.value.counselorPhone  
+    // <!-- 家长电话 -->// <!-- parentsPhone -->
+    data.parentsPhone = e.detail.value.parentsPhone  
+    
+
+
+  //   console.log(e);
+    console.log(JSON.stringify(data));
+    var mesg = data;
+    wx.setStorageSync('mesg', mesg)
+
+    wx.showToast({
+        title: '提交成功',
+        duration:3000,//显示时长
+        mask:true,//是否显示透明蒙层，防止触摸穿透，默认：false  
+        icon:'success', //图标，支持"success"、"loading"  
+        success:function(){     
+          wx.reLaunch({
+          url: '../index/index',
+        })},//接口调用成功
+      })
+
+ 
+
 
   },
 
+
 })
 
-
-
-
-
-
-// 模仿服务器端返回数据，用于测试
-function getServerData(callback) {
-
-  // 这里模仿 1000ms 后服务器端返回数据的效果
-  setTimeout(() => callback([
-    {
-      
-      date: '10月30日',
-      summary: '晴',
-      temperature: '10℃ ~ 20℃',
-      weather: '大晴天',
-      airQuality: '优',
-    }, 
-  ]), 1)
-}

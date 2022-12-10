@@ -84,7 +84,7 @@
 }
 
 .no_data {
-  background: #f8f8f8;
+  background: #7ec37b;
   border-radius: 16rpx;
   color: #b7b7b7;
   margin: 30rpx;
@@ -94,6 +94,35 @@
 
 
 
+.ani {
+  animation: float 3s linear 0s infinite;
+  background-image: url(https://meeting-image-1257318859.cos.ap-beijing.myqcloud.com/htmlImages/yfd/student/ani-balloon.png);
+  background-position: center 100%;
+  background-repeat: no-repeat;
+  background-size: 750rpx 510rpx;
+  min-height: 100vh;
+  position: absolute;
+  
+  top: 0;
+  width: 100%;
+}
 
+@-webkit-keyframes float {
+  0% {
+      background-position: center 50%;
+  }
 
+  100% {
+      background-position: center -510rpx;
+  }
+}
 
+@keyframes float {
+  0% {
+      background-position: center 50%;
+  }
+
+  100% {
+      background-position: center -508rpx;
+  }
+}

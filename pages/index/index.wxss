@@ -50,3 +50,34 @@ page {
 .botton_area .botton_item text {
   vertical-align: middle;
 }
+
+
+
+
+.application {
+  width: 100%;
+}
+
+.application .cu-item {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.application .img_box {
+  height: 100rpx;
+  position: relative;
+  width: 100rpx;
+}
+
+.application .img_box image {
+  height: 100%;
+  width: 100%;
+}
+
+
+.application .img_text {
+  color: #999;
+  font-size: 32rpx;
+}
