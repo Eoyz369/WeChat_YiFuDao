@@ -1,0 +1,37 @@
+.common-cardMd {
+    background: #fff;
+    border: 1rpx solid #e7e7e7;
+    border-radius: 16rpx;
+    box-shadow: 0 4px 16px #0000000d;
+    margin-bottom: 30rpx;
+    padding: 30rpx 24rpx;
+}
+
+.common-cardMd .title {
+    color: #252525;
+    font-size: 32rpx;
+    font-weight: regular;
+    letter-spacing: 0;
+    line-height: normal;
+    padding: 18rpx 0 14rpx;
+    text-align: justified;
+}
+
+.common-cardMd .title.ellips {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.cadBottom,.cadTop {
+    align-items: center;
+    display: flex;
+    font-size: 28rpx;
+    justify-content: space-between;
+}
+
+.common-cardMd.gray-bg-card {
+    background: #f8f8f8;
+    border: 2rpx solid #f8f8f8;
+    box-shadow: none;
+}
