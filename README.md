@@ -1,11 +1,10 @@
-# XCX_YiFuDao
-微信公众号：Nature369
+# Fake_YiFuDao
+微信公众号：Nature369   
 仿奕辅导做的一个微信小程序   
 有很多为完善的~ 暂时不打算继续完善   
 # 版本说明  
 【0.6】
-增加请假条显示(仅针对安卓)     
-苹果端移步[QuanX_YiFu](https://github.com/Eoyz369/QuanX_YiFuDao)
+增加请假条显示(仅针对安卓)；苹果端移步[QuanX_YiFuDao](https://github.com/Eoyz369/QuanX_YiFuDao)   
 【0.3】
 修复二维码处ios端时间获取错误问题  
 【0.2】
@@ -17,9 +16,10 @@
 不能做其他用途！请遵守当地的法律法规!
 
 # 请自行npm构建
-使用了 Vant
+使用了 Vant、ColorUI
 # Vant Weapp
 https://vant-ui.github.io/vant-weapp/#/quickstart
-
+# ColorUI
+https://github.com/weilanwl/coloruicss
 
 
