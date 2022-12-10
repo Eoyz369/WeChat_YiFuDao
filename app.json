@@ -2,9 +2,27 @@
   "pages":[
     "pages/index/index",
     "pages/my/my",
+    "pages/info/info",
+
+
     "pages/QRcode/QRcode",
+
+
     "pages/logs/logs",
+
+    
+    "pages/reviewDetail/reviewDetail",
     "pages/application/application",
+    "pages/notice/notice",
+    "pages/healthy/healthy",
+    "pages/location/location",
+    "pages/signInList/signInList",
+    "pages/activitySign/activitySign",
+
+    "pages/askForLeaveList/askForLeaveList",
+    
+    
+    "pages/s/s",
     "components/swiper/swiper"
     
   ],
@@ -32,7 +50,7 @@
         {
             "iconPath": "assets/img/info1.png",
             "selectedIconPath": "assets/img/info2.png",
-            "pagePath": "pages/logs/logs",
+            "pagePath": "pages/info/info",
             "text": "我的班级"
         },
         {
@@ -44,5 +62,9 @@
     ]
 },
 
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "cu-custom": "/colorui/components/cu-custom"
+  }
+
 }
