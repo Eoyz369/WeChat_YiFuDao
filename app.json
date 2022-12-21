@@ -22,14 +22,14 @@
     "pages/askForLeaveList/askForLeaveList",
     
     
-    "pages/s/s",
+
     "components/swiper/swiper"
     
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "奕辅导",
+    "navigationBarTitleText": "FakeYiFuDao",
     "navigationBarTextStyle":"black"
   },
 

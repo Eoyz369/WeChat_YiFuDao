@@ -46,11 +46,12 @@
     ],
     "minifyWXSS": true,
     "showES6CompileOption": false,
-    "minifyWXML": true
+    "minifyWXML": true,
+    "ignoreUploadUnusedFiles": true
   },
   "compileType": "miniprogram",
   "libVersion": "2.26.2",
-  "appid": "wxb8e76a9ee11b5d55",
+  "appid": "wx53bc1847cfb888b9",
   "projectname": "Fake_YiFuDao",
   "editorSetting": {
     "tabIndent": "insertSpaces",
