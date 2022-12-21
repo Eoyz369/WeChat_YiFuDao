@@ -1,0 +1,207 @@
+<!--pages/application/application.wxml-->
+
+
+
+
+
+
+  <view class="commonWrap" style="padding-left:50rpx;margin:0">
+
+    <form bindsubmit="formSubmit" catchreset="formReset">
+<!-- 姓名 -->
+<!-- studentName -->
+  <view class="form-item">
+        <view class="label">
+            <text class="must">*</text>姓名 </view>
+        <view class="stick">
+            <van-field autosize name="studentName" border="false" class="textarea-md" clearable="true" customStyle="border-radius: 16rpx;background: #F8F8F8;" maxlength="30" placeholder="请输入姓名" type="input" value="{{studentName}}"></van-field>
+        </view>
+    </view>
+
+
+<!-- 选择学院 -->
+<!-- collegeConfigs -->
+    <view class="form-item">
+        <view class="label">
+            <text class="must">*</text>学院</view>
+            <view class="stick">     
+            <picker range-key="name" bindchange="showCollegeType" value="{{collegeConfigs}}" range="{{showCollegeType}}" mode = "selector">
+              <van-cell name="collegeConfigs" class="m-picker-lable" title=" {{showCollegeType[collegeConfigs].name||'请选择学院'}}" is-link>
+              </van-cell>
+            </picker>
+        </view>
+    </view>
+
+<!-- 班级 -->
+<!-- studentClass -->
+    <view class="form-item">
+        <view class="label">
+            <text class="must">*</text>班级</view>
+        <view class="stick">
+            <van-field  name="studentClass" autosize  border="false" class="textarea-md" clearable="true" customStyle="border-radius: 16rpx;background: #F8F8F8;" maxlength="30" placeholder="请输入班级" type="input" value="{{studentClass}}"></van-field>
+        </view>
+    </view>
+
+
+<!-- 请假类型 -->
+<!-- askForLeaveConfigs -->
+    <view class="form-item">
+        <view class="label">
+            <text class="must">*</text>请假类型</view>
+        <view class="stick">     
+            <picker   range-key="name"  bindchange="showPickerType" value="{{askForLeaveConfigs}}" range="{{showLeaveType}}" mode = "selector">
+              <van-cell  name="askForLeaveConfigs" class="m-picker-lable" title=" {{showLeaveType[askForLeaveConfigs].name||'请选择请假类型'}}" is-link>
+              </van-cell>
+            </picker>
+        </view>
+    </view>
+<!-- 外出地点 -->
+<!-- location -->
+    <view class="form-item alignTop" >
+        <view class="label">
+            <text class="must">*</text>外出地点<view class="gray-txt">30字内</view>
+        </view>
+        <view class="stick">
+            <van-field  name="location"  autosize border="{{false}}" class="textarea-md" clearable="{{true}}" customStyle="border-radius: 16rpx;background: #F8F8F8;" maxlength="{{30}}" placeholder="请输入外出地点" type="input" value="{{location}}"></van-field>
+        </view>
+    </view>
+
+<!-- 请假原因 -->
+<!-- leaveForReason -->
+    <view class="form-item alignTop">
+        <view class="label">
+            <text class="must">*</text>请假原因<view class="gray-txt">200字内</view>
+        </view>
+        <view class="stick">
+            <van-field autosize name="leaveForReason"  border="false"  class="textarea-md"  customStyle="border-radius: 16rpx;background: #F8F8F8;" maxlength="{{200}}" placeholder="请输入请假原因" type="textarea" value="{{leaveForReason}}"></van-field>
+        </view>
+    </view>
+
+<!-- 离校时间 -->
+<!-- beginTimeFormat -->
+    <view class="form-item">
+        <view class="label">
+            <text class="must">*</text>开始时间</view>
+        <view class="stick" >
+
+            <van-cell name="beginTimeFormat"  isLink bind:click="showPickerBeginTime" class="m-picker-lable" title="{{beginTimeFormat||'请输入开始时间'}}"></van-cell>
+            <van-popup  show="{{showBeginTime}}" bind:close="onCloseBeginTime" bind:getuserinfo="onGetUserInfo" position="bottom" >
+              <van-datetime-picker  type="datetime" value="{{currentDate}}" min-date="{{ beginMinDate }}" max-date="{{ beginMaxDate }}" bind:cancel="onCancelBeginTime" bind:confirm="onConfirmBeginTime"></van-datetime-picker>
+            </van-popup>
+        </view>
+    </view>
+
+<!-- 返校时间 -->
+<!-- endTimeFormat -->
+    <view class="form-item">
+        <view class="label">
+            <text class="must">*</text>结束时间</view>
+        <view class="stick">
+          <van-cell name="endTimeFormat" isLink bind:click="showPickerEndTime" class="m-picker-lable" title="{{endTimeFormat||'请输入结束时间'}}"></van-cell>
+          <van-popup show="{{showEndTime}}" bind:close="onCloseEndTime" bind:getuserinfo="onGetUserInfo" position="bottom" >
+                <van-datetime-picker type="datetime" value="{{currentDate}}" min-date="{{ endMinDate }}" max-date="{{ endMaxDate }}" bind:cancel="onCancelEndTime" bind:confirm="onConfirmEndTime"   ></van-datetime-picker>
+            </van-popup>
+        </view>
+    </view>
+
+<!-- 是否出校 -->
+    <!-- <view class="form-item">
+        <view class="label">
+            <text class="must">*</text>是否出校</view>
+        <view class="stick" style="padding:15rpx 30rpx">
+            <van-radio-group  direction="horizontal" >
+                <van-radio checkedColor="#7EC37B" iconSize="16" name="1">是</van-radio>
+                <van-radio checkedColor="#7EC37B" iconSize="16" name="0">否</van-radio>
+            </van-radio-group>
+        </view>
+    </view> -->
+
+        <!-- 校领导姓名 -->
+<!-- schoolAuthorityName -->
+<view class="form-item">
+        <view class="label">
+            <text class="must">*</text>校领导姓名</view>
+        <view class="stick">
+            <van-field name="schoolAuthorityName"  autosize border="false" class="textarea-md" clearable="true" customStyle="border-radius: 16rpx;background: #F8F8F8;" maxlength="30" placeholder="请输入校领导姓名" type="input" value="{{schoolAuthorityName}}"></van-field>
+        </view>
+    </view>
+
+    <!-- 系主任姓名 -->
+<!-- headOfDepartmentName -->
+<view class="form-item">
+        <view class="label">
+            <text class="must">*</text>系主任姓名</view>
+        <view class="stick">
+            <van-field name="headOfDepartmentName"  autosize border="false" class="textarea-md" clearable="true" customStyle="border-radius: 16rpx;background: #F8F8F8;" maxlength="30" placeholder="请输入系主任员姓名" type="input" value="{{headOfDepartmentName}}"></van-field>
+        </view>
+    </view>
+
+<!-- 辅导员信息 -->
+<!-- 辅导员姓名 -->
+<!-- counselorName -->
+    <view class="form-item">
+        <view class="label">
+            <text class="must">*</text>辅导员姓名</view>
+        <view class="stick">
+            <van-field name="counselorName"  autosize border="false" class="textarea-md" clearable="true" customStyle="border-radius: 16rpx;background: #F8F8F8;" maxlength="30" placeholder="请输入辅导员姓名" type="input" value="{{counselorName}}"></van-field>
+        </view>
+    </view>
+<!-- 辅导员电话 -->
+<!-- counselorPhone -->
+    <view class="form-item">
+        <view class="label">
+            <text class="must">*</text>辅导员电话</view>
+        <view class="stick">
+            <van-field autosize name="counselorPhone" bind:change="onChangeEmergencyContactPhone" border="false" class="textarea-md" clearable="true" customStyle="border-radius: 16rpx;background: #F8F8F8;" maxlength="30" placeholder="请输入辅导员电话" type="input" value="{{counselorPhone}}"></van-field>
+        </view>
+    </view>
+
+
+
+
+
+
+<!-- 家长是否知情 -->
+    <view class="form-item">
+        <view class="label">
+            <text class="must">*</text>家长是否知情</view>
+        <view class="stick" style="padding:15rpx 30rpx">
+            <van-radio-group  direction="horizontal" >
+                <van-radio checkedColor="#7EC37B" iconSize="16" name="1">是</van-radio>
+                <van-radio checkedColor="#7EC37B" iconSize="16" name="0">否</van-radio>
+            </van-radio-group>
+        </view>
+    </view>
+<!-- 紧急联系人电话 -->
+<!-- parentsPhone -->
+    <view class="form-item">
+        <view class="label">
+            <text class="must">*</text>紧急联系人电话 </view>
+        <view class="stick">
+            <van-field autosize name="parentsPhone" bind:change="onChangeEmergencyContactPhone" border="false" class="textarea-md" clearable="true" customStyle="border-radius: 16rpx;background: #F8F8F8;" maxlength="30" placeholder="请输入紧急联系人电话" type="input" value="{{parentsPhone}}"></van-field>
+        </view>
+    </view>
+
+ <!--免责声明-->
+ <block  wx:if="{{disclaimer}}">
+  <van-checkbox bind:change="onChangeDisclaimer" checkedColor="#7EC37B" iconSize="16px" shape="square" value="{{disclaimer}}" > 本人确认以上信息真实有效</van-checkbox>
+  
+ </block>
+ <block  wx:if="{{!disclaimer}}">
+  <van-checkbox bind:change="onChangeDisclaimer" checkedColor="#7EC37B" iconSize="16px" shape="square" value="{{disclaimer}}" > 本人确认以上信息真实有效</van-checkbox>
+ </block>
+<!--提交按钮-->
+<view class="botton_area">
+  <button class="botton_item"  type="primary" wx:if="{{disclaimer}}" formType="submit">提交申请</button>
+    <!-- <view bindtap="apply" class="botton_item" wx:if="{{disclaimer}}">
+        <text>提交申请</text>
+    </view> -->
+    <button class="botton_item_grey"  type="primary" wx:if="{{!disclaimer}}" formType="submit">提交申请</button>
+    <!-- <view class="botton_item_grey" wx:if="{{!disclaimer}}">
+        <text>提交申请</text>
+    </view> -->
+</view>
+
+</form>
+</view>
+
