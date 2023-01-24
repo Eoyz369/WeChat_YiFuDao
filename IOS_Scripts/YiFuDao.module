@@ -1,0 +1,21 @@
+#!name=奕辅导
+#!desc=Fake奕辅导
+# 微信公众号：Nature369
+
+[Script]
+
+# 列表
+list = type=http-response,pattern=^https://yfd\.ly-sky\.com/ly-ms/application/api/oa/applyList,requires-body=1,max-size=3145728,script-path=https://raw.githubusercontent.com/Eoyz369/QuanX_YiFuDao/main/list.js,script-update-interval=0
+
+# 详情
+detail = type=http-response,pattern=https://yfd\.ly-sky\.com/ly-ms/application/api/oa/detail/*,requires-body=1,max-size=3145728,script-path=https://raw.githubusercontent.com/Eoyz369/QuanX_YiFuDao/main/detail.js,script-update-interval=0
+
+# 我的
+status = type=http-response,pattern=^https://yfd\.ly-sky\.com/ly-ms/application/api/st/mine/oa/status,requires-body=1,max-size=3145728,script-path=https://raw.githubusercontent.com/Eoyz369/QuanX_YiFuDao/main/status.js,script-update-interval=0
+
+# 出入二维码
+baseInfo = type=http-response,pattern=^https://yfd\.ly-sky\.com/ly-ms/application/api/st/mine/inAndOutQrCode/baseInfo,requires-body=1,max-size=3145728,script-path=https://raw.githubusercontent.com/Eoyz369/QuanX_YiFuDao/main/baseInfo.js,script-update-interval=0
+
+[MITM]
+
+hostname = %APPEND% *.ly-sky.com
