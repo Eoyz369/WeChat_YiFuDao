@@ -1,0 +1,32 @@
+{
+  "usingComponents": {
+      "no-data": "/components/noData/noData",
+      "common-card": "/components/commonCard/commonCard",
+      "van-dropdown-menu": "@vant/weapp/dropdown-menu/index",
+      "van-dropdown-item": "@vant/weapp/dropdown-item/index",
+      "van-search": "@vant/weapp/search/index",
+      "van-share-sheet": "@vant/weapp/share-sheet/index",
+      "van-radio": "@vant/weapp/radio/index",
+      "van-radio-group": "@vant/weapp/radio-group/index",
+      "van-field": "@vant/weapp/field/index",
+      "van-button": "@vant/weapp/button/index",
+      "van-popup": "@vant/weapp/popup/index",
+      "van-cell": "@vant/weapp/cell/index",
+      "van-picker": "@vant/weapp/picker/index",
+      "van-dialog": "@vant/weapp/dialog/index",
+      "van-action-sheet": "@vant/weapp/action-sheet/index",
+      "van-toast": "@vant/weapp/toast/index",
+      "van-row": "@vant/weapp/row/index",
+      "van-col": "@vant/weapp/col/index",
+      "van-icon": "@vant/weapp/icon/index",
+      "van-tab": "@vant/weapp/tab/index",
+      "van-tabs": "@vant/weapp/tabs/index",
+      "van-uploader": "@vant/weapp/uploader/index",
+      "van-checkbox": "@vant/weapp/checkbox/index",
+      "van-checkbox-group": "@vant/weapp/checkbox-group/index",
+      "van-datetime-picker": "@vant/weapp/datetime-picker/index",
+      "van-collapse": "@vant/weapp/collapse/index",
+      "van-collapse-item": "@vant/weapp/collapse-item/index"
+  },
+  "navigationBarTitleText": "请假列表"
+}

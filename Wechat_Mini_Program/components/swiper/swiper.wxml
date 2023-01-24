@@ -1,0 +1,14 @@
+<!--components/swiper/swiper.wxml-->
+<view class="container">
+    <swiper autoplay circular bind:change="swiperChange" class="swiper-box" interval="3000">
+        <swiper-item wx:for="{{swiperList}}" wx:key="index">
+            <image bindtap="toLink" class="targetImg" data-index="{{index}}" data-item="{{item}}" mode="aspectFill" src="{{item}}"></image>
+        </swiper-item>
+    </swiper>
+        <!--重置小圆点的样式  -->
+    <view class="dots" wx:if="{{swiperList.length>1}}">
+        <view class="dotsBox">
+            <text class="dot {{index==currentIndex?'dot-active':''}}" wx:for="{{swiperList}}" wx:key="index"></text>
+        </view>
+    </view>
+</view>

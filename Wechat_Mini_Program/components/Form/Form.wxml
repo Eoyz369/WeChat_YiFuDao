@@ -1,0 +1,66 @@
+<view class="page">
+    <view class="ly_form" wx:for="{{subjectList}}" wx:key="index">
+        <view class="form_title">
+            <text class="num">{{index<10?'0':''}}{{index+1}}</text>
+            <text class="must" wx:if="{{item.isMustFill=='Yes'}}">*</text>
+            <text class="">「{{signleSelectJson[item.subjectType]}}」</text> {{item.subjectTitle}} <image bindtap="previewTitleImage" class="title_image" data-src="{{imgPrefix+it}}" mode="widthFix" src="{{imgPrefix+it}}" wx:if="{{item.imgList.length>0}}" wx:for="{{item.imgList}}" wx:for-item="it" wx:key="index"></image>
+        </view>
+        <view class="form_content">
+            <block wx:if="{{item.subjectType=='signleSelect'}}">
+                <label bindtap="radioChange" class="radio_list {{it.checked?it.beSelectValue=='Positive'?'red':'checked':''}}" data-i="{{i}}" data-index="{{index}}" data-item="{{it}}" data-value="{{i.beSelectValue}}" wx:for="{{item.signleSelect.options}}" wx:for-index="i" wx:for-item="it" wx:key="i">
+                    <view class="radio_box">
+                        <view class="label_radio"></view>
+                        <view class="label_text {{it.checked&&it.beSelectValue=='Positive'?'red':''}}">{{it.text}}</view>
+                    </view>
+                    <image class="opt_img" mode="aspectFill" src="{{imgPrefix+itemImg}}" wx:for="{{it.imgList}}" wx:for-index="j" wx:for-item="itemImg" wx:key="j"></image>
+                    <view class="input_box" wx:if="{{it.fillContent}}">
+                        <input bind:input="inputOptChange" data-i="{{i}}" data-index="{{index}}" disabled="{{canEdit?false:true}}" maxLength="{{item.simpleFill.maxLength}}" placeholder="{{it.fillContent.placeholder?it.fillContent.placeholder:'请输入'}}" type="text" value="{{it.fillContent.value}}" wx:if="{{indexOf.str(it.fillContent.inputContentTypes,'Text')!=-1}}"></input>
+                    </view>
+                </label>
+            </block>
+            <block wx:elif="{{item.subjectType=='multiSelect'}}">
+                <view bindtap="checkChange" data-i="{{i}}" data-index="{{index}}" data-item="{{it}}" wx:for="{{item.multiSelect.options}}" wx:for-index="i" wx:for-item="it" wx:key="i">
+                    <label class="check_box {{it.checked?'checked':''}} {{it.textColor==='#FF594F'?'checked_red':''}}">
+                        <view class="label_check"></view>
+                        <view class="label_text">{{it.text}}</view>
+                    </label>
+                    <image class="opt_img" mode="aspectFill" src="{{imgPrefix+itemImg}}" wx:for="{{it.imgList}}" wx:for-index="j" wx:for-item="itemImg" wx:key="j"></image>
+                    <view class="input_box" wx:if="{{it.fillContent}}">
+                        <input bind:input="inputOptChange" catchtap="inputOptChange" data-i="{{i}}" data-index="{{index}}" maxLength="{{item.simpleFill.maxLength}}" placeholder="{{it.fillContent.placeholder}}" type="text" value="{{it.fillContent.value}}" wx:if="{{indexOf.str(it.fillContent.inputContentTypes,'Text')!=-1}}"></input>
+                    </view>
+                </view>
+            </block>
+            <view wx:elif="{{item.subjectType=='simpleFill'}}">
+                <textarea bind:input="inputChange" data-index="{{index}}" data-item="{{item.simpleFill}}" disabled="{{canEdit?false:true}}" maxLength="{{item.simpleFill.maxLength}}" placeholder="{{item.simpleFill.inputContent.placeholder?item.simpleFill.inputContent.placeholder:'请输入'}}" style="width: 100%;" type="text" value="{{item.simpleFill.inputContent.value}}" wx:if="{{indexOf.str(item.simpleFill.inputContent.inputContentTypes,'Text')!=-1}}"></textarea>
+                <view class="grid col-4 grid-square flex-sub margin-top-sm" wx:if="{{indexOf.str(item.simpleFill.inputContent.inputContentTypes,'Image')!=-1}}">
+                    <view bindtap="previewImage" class="bg-img" data-i="{{i}}" data-index="{{index}}" data-src="{{imgPrefix+imgItem}}" wx:for="{{item.simpleFill.imgList}}" wx:for-index="i" wx:for-item="imgItem" wx:key="i">
+                        <image mode="aspectFill" src="{{imgPrefix+imgItem}}"></image>
+                        <view catchtap="delImg" class="del_img" data-i="{{i}}" data-index="{{index}}" wx:if="{{canEdit}}">
+                            <image mode="widthFix" src="https://meeting-image-1257318859.cos.ap-beijing.myqcloud.com/htmlImages/yfd/student/icon/del-icon.png"></image>
+                        </view>
+                    </view>
+                    <view bindtap="chooseImage" class="solids" data-index="{{index}}" data-item="{{item}}" wx:if="{{canEdit}}">
+                        <view class="wh">
+                            <image mode="widthFix" src="https://meeting-image-1257318859.cos.ap-beijing.myqcloud.com/htmlImages/yfd/student/icon/icon-add.png"></image>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view bindtap="getLocation" data-index="{{index}}" style="display:flex" wx:elif="{{item.subjectType=='location'}}">
+                <view style="width:30rpx;margin-top: 6rpx;">
+                    <image mode="widthFix" src="https://meeting-image-1257318859.cos.ap-beijing.myqcloud.com/htmlImages/yfd/student/icon/icon-local-green.png"></image>
+                </view>
+                <view class="address_box">{{address?address:'点击获取定位'}}</view>
+            </view>
+        </view>
+    </view>
+</view>
+<view bindtap="submit" class="authorize" wx:if="{{isShowBtn}}">提交</view>
+<wxs module="indexOf">
+var str = (function(val, key) {
+    return (val.indexOf(key))
+});
+module.exports = ({
+    str: str,
+});
+</wxs>

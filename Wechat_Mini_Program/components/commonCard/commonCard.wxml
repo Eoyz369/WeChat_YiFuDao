@@ -1,0 +1,9 @@
+<view catchtap="onclick" class="{{grayBg?'common-cardMd gray-bg-card':'common-cardMd'}}" wx:if="{{hasData}}">
+    <slot name="slotTop"></slot>
+    <view class="{{ifElips?'title ellips':'title'}}" style="padding-right:{{titlePdRt?'80rpx':'0'}}" wx:if="{{showTitle}}">{{pram.title}}</view>
+    <slot name="slotContent"></slot>
+    <slot name="slotBottom"></slot>
+</view>
+<view catchtap="onclick" class="common-cardMd" wx:if="{{!hasData}}">
+    <slot name="main"></slot>
+</view>

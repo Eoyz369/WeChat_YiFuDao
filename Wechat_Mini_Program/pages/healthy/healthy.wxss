@@ -1,0 +1,388 @@
+page {
+  height: 100%;
+  width: 100%;
+}
+
+.form {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  padding-bottom: 60rpx;
+  width: 100%;
+}
+
+.top_box {
+  background: url("https://meeting-image-1257318859.cos.ap-beijing.myqcloud.com/htmlImages/yfd/student/qiu-bg.png");
+  background-color: var(--themeColor);
+  background-size: 706rpx 200rpx;
+  border-radius: 32rpx;
+  margin: 24rpx 24rpx 0;
+  padding: 24rpx 34rpx;
+}
+
+.top_box .title {
+  color: #fff;
+  font-size: 40rpx;
+  font-weight: 500;
+}
+
+.top_box .bom {
+  display: flex;
+  height: 100rpx;
+  justify-content: space-between;
+}
+
+.top_box .bottom_info {
+  align-items: center;
+  color: #fff;
+  display: flex;
+  font-size: 28rpx;
+  margin-top: 36rpx;
+}
+
+.top_box .bottom_info text {
+  border-bottom: 1rpx solid #fff;
+}
+
+.describe {
+  margin: 30rpx 30rpx 0;
+}
+
+.form_time {
+  padding: 48rpx 0 40rpx;
+  text-align: center;
+}
+
+.form_time>text {
+  background: rgba(126,195,123,.1);
+  border-radius: 100rpx;
+  color: #252525;
+  font-size: 28rpx;
+  padding: 16rpx 44rpx;
+}
+
+.form_time>text .times {
+  color: var(--themeColor);
+}
+
+.form_content {
+  flex-grow: 1;
+  overflow-y: scroll;
+}
+
+.mt {
+  margin-top: 42rpx;
+}
+
+.tips {
+  align-items: center;
+  display: flex;
+  margin-bottom: 35rpx;
+}
+
+.tips image {
+  margin-right: 16rpx;
+  width: 30rpx;
+}
+
+.tips text {
+  color: #999;
+  font-size: 24rpx;
+}
+
+.mask {
+  z-index: 999;
+}
+
+.mask,.mask .mask_back {
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.mask .mask_back {
+  background-color: rgba(0,0,0,.5);
+}
+
+.mask .mask_content {
+  background-color: #fff;
+  border-radius: 16rpx;
+  color: #333;
+  font-size: 34rpx;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: 90%;
+}
+
+.mask_content .content_top {
+  padding: 50rpx;
+}
+
+.mask_content .content_con {
+  color: #999;
+  padding: 0 50rpx;
+}
+
+.mask_content .content_con .p {
+  margin-bottom: 30rpx;
+}
+
+.mask_content .mask_title {
+  font-size: 42rpx;
+  font-weight: 700;
+  text-align: center;
+}
+
+.mask_content .content_bom view {
+  border-top: 1px solid #e7e7e7;
+  bottom: 0;
+  color: #7ec37b;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+}
+
+
+
+.page {
+  background-color: #f8f8f8;
+}
+
+.ly_form {
+  background: rgb(255, 255, 255);
+  margin-bottom: 20rpx;
+  padding: 30rpx;
+  width: 100%;
+}
+
+.ly_form:last-child {
+  margin-bottom: 0;
+}
+
+.form_title {
+  font-size: 32rpx;
+  margin-bottom: 32rpx;
+}
+
+.form_title>text {
+  color: var(--themeColor);
+}
+
+.form_title .num {
+  color: #999;
+}
+
+.form_title .must {
+  color: var(--themeColor);
+  margin-left: 10rpx;
+}
+
+.form_content {
+  background: #fff;
+  width: 100%;
+}
+
+.form_location {
+  display: flex;
+}
+
+.form_location text {
+  color: var(--themeColor);
+  margin-left: 16rpx;
+}
+
+.form_content .radio_box {
+  align-items: center;
+  display: flex;
+  margin-bottom: 30rpx;
+  margin-top: 30rpx;
+}
+
+.form_content .radio_box:last-child {
+  margin-bottom: 0;
+}
+
+.form_content .radio_box .label_radio {
+  background-color: #fff;
+  border: 5rpx solid #cecece;
+  border-radius: 50%;
+  height: 32rpx;
+  margin-right: 24rpx;
+  width: 32rpx;
+}
+
+.form_content .radio_list.checked .radio_box .label_radio {
+  border: 5rpx solid var(--themeColor);
+}
+
+.form_content .radio_list.red .radio_box .label_radio {
+  border: 5rpx solid #ff594f;
+}
+
+.form_content .radio_list.red .radio_box .label_radio::before {
+  background-color: #ff594f;
+  border-radius: 50%;
+  content: "";
+  display: block;
+  height: 20rpx;
+  width: 20rpx;
+}
+
+.form_content .radio_list.checked .radio_box .label_radio::before {
+  background-color: var(--themeColor);
+  border-radius: 50%;
+  content: "";
+  display: block;
+  height: 20rpx;
+  width: 20rpx;
+}
+
+.form_content .radio_box .label_text {
+  color: #999;
+  font-size: 32rpx;
+}
+
+.form_content .radio_box.checked .label_text {
+  color: var(--themeColor);
+}
+
+.form_content .check_box {
+  align-items: center;
+  display: flex;
+  margin-bottom: 0;
+  margin-top: 30rpx;
+}
+
+.form_content .opt_img {
+  border-radius: 10rpx;
+  margin-bottom: 0;
+  width: 100%;
+}
+
+.form_content .check_box .label_check {
+  background-color: #fff;
+  border: 5rpx solid #cecece;
+  border-radius: 8rpx;
+  height: 32rpx;
+  margin-right: 24rpx;
+  width: 32rpx;
+}
+
+.form_content .check_box.checked .label_check {
+  align-items: center;
+  background-color: #fff;
+  border: 5rpx solid var(--themeColor);
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.form_content .check_boxchecked .label_check {
+  background-color: var(--themeColor);
+  border-radius: 4rpx;
+  content: "";
+  display: block;
+  height: 70%;
+  width: 70%;
+}
+
+
+
+.form_content .check_box.checked.checked_red .label_text {
+  color: #ff594f;
+}
+
+.form_content .check_box .label_text {
+  color: #999;
+  flex: 1;
+  font-size: 32rpx;
+}
+
+.form_content .check_box.checked .label_text {
+  color: var(--themeColor);
+}
+
+.del_img {
+  border-radius: 50%;
+  height: 36rpx;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 36rpx;
+}
+
+.input_box {
+  background: #f8f8f8;
+  border-radius: 16rpx;
+  box-sizing: border-box;
+  font-size: 32rpx;
+  height: 96rpx;
+  margin-top: 20rpx;
+  padding: 24rpx 20rpx;
+}
+
+.input_box input {
+  height: 42rpx;
+  width: 100%;
+}
+
+textarea {
+  background: #f8f8f8;
+  border-radius: 16rpx;
+  padding: 24rpx;
+}
+
+.wh {
+  margin-left: 50rpx;
+  margin-top: 50rpx;
+  width: 48rpx;
+}
+
+.solids {
+  border-radius: 16rpx!important;
+}
+
+.form_title_address {
+  align-items: center;
+  display: flex;
+  height: 50rpx;
+  justify-content: space-between;
+}
+
+.address_box {
+  color: var(--themeColor);
+  font-size: 32rpx;
+  margin-left: 12rpx;
+}
+
+.bor_rad {
+  border-radius: 16rpx;
+  width: 100%;
+}
+
+.authorize {
+  background: var(--themeColor);
+  border-radius: 48rpx;
+  color: #fff;
+  font-size: 34rpx;
+  height: 96rpx;
+  line-height: 96rpx;
+  margin: 30rpx 30rpx 50rpx;
+  text-align: center;
+}
+
+.title_image {
+  border-radius: 10rpx;
+  margin-top: 20rpx;
+  width: 100%;
+}
+
+.red {
+  color: #ff594f!important;
+}

@@ -1,0 +1,24 @@
+<!--index.wxml-->
+
+
+<view class="index">
+  <w-swiper  swiperList="{{swiperList}}"></w-swiper>
+
+  <view class="application">
+        <view class="cu-list grid col-4 no-border" >
+            <view class="cu-item"  wx:for="{{imgPrefix}}" wx:key="index" >
+              
+              <navigator class="cu-item"  url="{{item.path}}">
+                <view class="img_box">
+                    <image src="{{item.icon}}"></image>  
+                </view>
+                <text class="img_text">{{item.name}}</text>
+
+              </navigator >
+            </view>
+        </view>
+    </view>
+</view>
+
+
+
