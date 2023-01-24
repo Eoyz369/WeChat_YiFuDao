@@ -1,0 +1,70 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/my/my",
+    "pages/info/info",
+
+
+    "pages/QRcode/QRcode",
+
+
+    "pages/logs/logs",
+
+    
+    "pages/reviewDetail/reviewDetail",
+    "pages/application/application",
+    "pages/notice/notice",
+    "pages/healthy/healthy",
+    "pages/location/location",
+    "pages/signInList/signInList",
+    "pages/activitySign/activitySign",
+
+    "pages/askForLeaveList/askForLeaveList",
+    
+    
+
+    "components/swiper/swiper"
+    
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "FakeYiFuDao",
+    "navigationBarTextStyle":"black"
+  },
+
+
+
+
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#7EC37B",
+    "borderStyle": "black",
+    "list": [
+        {
+            "iconPath": "assets/img/home1.png",
+            "selectedIconPath": "assets/img/home2.png",
+            "pagePath": "pages/index/index",
+            "text": "首页"
+        },
+        {
+            "iconPath": "assets/img/info1.png",
+            "selectedIconPath": "assets/img/info2.png",
+            "pagePath": "pages/info/info",
+            "text": "我的班级"
+        },
+        {
+            "iconPath": "assets/img/me1.png",
+            "selectedIconPath": "assets/img/me2.png",
+            "pagePath": "pages/my/my",
+            "text": "我的"
+        }
+    ]
+},
+
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "cu-custom": "/colorui/components/cu-custom"
+  }
+
+}
