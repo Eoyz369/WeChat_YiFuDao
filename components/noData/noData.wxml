@@ -1,6 +1,0 @@
-<view class="g-nothing" wx:if="{{!ifHasDit}}">
-    <view class="img">
-        <image mode="aspectFill" src="{{url}}"></image>
-    </view>
-    <text class="dec">{{msg}}</text>
-</view>
