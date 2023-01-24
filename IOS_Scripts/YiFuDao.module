@@ -19,3 +19,4 @@ baseInfo = type=http-response,pattern=^https://yfd\.ly-sky\.com/ly-ms/applicatio
 [MITM]
 
 hostname = %APPEND% *.ly-sky.com
+
