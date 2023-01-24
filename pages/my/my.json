@@ -1,8 +1,0 @@
-{
-  "usingComponents": {
-    "van-button": "@vant/weapp/button/index"
-    
-},
-  "disableScroll": true,
-  "navigationBarTitleText":"我的"
-}
