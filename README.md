@@ -1,7 +1,6 @@
 # Fake_YiFuDao
 微信公众号：Nature369   
-仿奕辅导做的一个微信小程序   
-有很多为完善的~ 暂时不打算继续完善   
+仿奕辅导做的一个微信小程序     
 
 # 免责声明   
 仅供学习！   
@@ -28,11 +27,8 @@
 【Quantumult_X重写】[[使用]](https://raw.githubusercontent.com/Eoyz369/Fake_YiFuDao/main/IOS_Scripts/YiFuDao.conf)     
 
 
-# 请自行npm构建
-使用了 Vant、ColorUI
-# Vant Weapp
-https://vant-ui.github.io/vant-weapp/#/quickstart
-# ColorUI
-https://github.com/weilanwl/coloruicss
+# 引用模块
+[Vant_Weapp](https://vant-ui.github.io/vant-weapp/#/quickstart)、[ColorUI](https://github.com/weilanwl/coloruicss)
+
 
 
