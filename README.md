@@ -22,7 +22,7 @@
 
 # [IOS_重写](https://github.com/Eoyz369/Fake_YiFuDao/tree/main/IOS_Scripts)说明   
 【1.0】完善二维码显示，完善批假时间显示   
-【Tip】请假申请列表需要有一次数据。   
+*请假申请列表需要有一次数据。   
 【Shadowrocket模块】[[使用]](https://raw.githubusercontent.com/Eoyz369/Fake_YiFuDao/main/IOS_Scripts/YiFuDao.module)    
 【Quantumult_X重写】[[使用]](https://raw.githubusercontent.com/Eoyz369/Fake_YiFuDao/main/IOS_Scripts/YiFuDao.conf)     
 
