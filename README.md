@@ -34,4 +34,3 @@
 # 访问量
 ![Visitor Count](https://profile-counter.glitch.me/Fake_YiFuDao/count.svg)
 
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Eoyz369&layout=compact&theme=tokyonight)
