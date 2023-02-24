@@ -2,7 +2,7 @@
 微信公众号：Nature369   
 仿奕辅导做的一个微信小程序     
 
-# 免责声明   
+## 免责声明   
 仅供学习！   
 不能做其他用途！请遵守当地的法律法规!
 
@@ -33,3 +33,5 @@
 
 # 访问量
 ![Visitor Count](https://profile-counter.glitch.me/Fake_YiFuDao/count.svg)
+
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Fake_YiFuDao&layout=compact&theme=tokyonight)
