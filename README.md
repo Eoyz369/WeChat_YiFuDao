@@ -34,3 +34,9 @@
 ### 访问量
 ![Visitor Count](https://profile-counter.glitch.me/Fake_YiFuDao/count.svg)
 
+### Star History <a name="star-history"></a>
+
+<a href="https://github.com/Eoyz369/Fake_YiFuDao">
+        <img width="500" alt="Star History Chart" src="https://api.star-history.com/svg?repos=xtekky/Fake_YiFuDao&type=Date">
+      </a> 
+
