@@ -32,5 +32,5 @@
 
 
 ### 访问量
-![Visitor Count](https://profile-counter.glitch.me/Fake_YiFuDao/count.svg)
+![Visitor Count](https://profile-counter.glitch.me/WeChat_YiFuDao/count.svg)
 
