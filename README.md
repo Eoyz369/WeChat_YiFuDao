@@ -30,7 +30,7 @@
 
 
 ### 引用模块
-[Vant_Weapp](https://vant-ui.github.io/vant-weapp/#/quickstart)、[ColorUI](https://github.com/weilanwl/coloruicss)
+[Vant_Weapp](https://github.com/youzan/vant-weapp)、[ColorUI](https://github.com/weilanwl/coloruicss)
 
 
 ### 访问量
