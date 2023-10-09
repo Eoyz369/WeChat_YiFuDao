@@ -1,7 +1,0 @@
-{
-  "usingComponents": {
-    "van-button": "@vant/weapp/button/index",
-    "van-tag": "@vant/weapp/tag/index"
-  },
-  "navigationBarTitleText": "出入校二维码"
-}
