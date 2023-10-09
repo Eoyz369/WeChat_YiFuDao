@@ -1,0 +1,169 @@
+/* pages/my/my.wxss */
+page {
+  background-color: #fff;
+  height: 100%;
+  width: 100%;
+}
+
+.person_info {
+  align-items: center;
+  padding: 30rpx;
+}
+
+.person_info,.person_info .left {
+  display: flex;
+}
+
+.person_info .left {
+  flex: 1;
+}
+
+.person_info image {
+  border-radius: 50%;
+  height: 144rpx;
+  margin-right: 36rpx;
+  width: 144rpx;
+}
+
+.person_info .person {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.person .name {
+  color: #000;
+  font-size: 34rpx;
+  font-weight: 500;
+}
+
+.person .college {
+  color: #717771;
+  font-size: 28rpx;
+  margin-top: 16rpx;
+}
+
+.person_info .right {
+  color: #717771;
+  font-size: 28rpx;
+}
+
+.list_box .list,.person_info .right {
+  align-items: center;
+  display: flex;
+}
+
+.list_box .list {
+  justify-content: space-between;
+  margin: 30rpx;
+}
+
+.list_box .list .left,.list_box .list .left button {
+  align-items: center;
+  display: flex;
+}
+
+.list_box .list .left button {
+  background: #fff!important;
+  color: #000!important;
+  flex: 1;
+  font-size: 32rpx!important;
+  font-weight: 400;
+  justify-content: space-between;
+  padding-left: 0;
+}
+
+.left .list_img {
+  height: 36rpx;
+  margin-right: 16rpx;
+  width: 36rpx;
+}
+
+.left .list_img image {
+  height: 100%;
+  width: 100%;
+}
+
+.hh {
+  height: 30rpx;
+  margin-left: 10rpx;
+ background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABzSURBVHgBxZLRCcAwCESNk2SVjpOJgtN0lDqJtAf9kij2o+R+hOi9cCLRbrXVo4hcqGZ2jDE0A3DS68x8zjk7fQXg56doBdKiBkwwAwJYFCcEVCHZDgjDPo6fSQEVpYBVBD/zzxKr5jBC1RwCXmnllPfrBifDURSTdH8EAAAAAElFTkSuQmCC);
+}
+
+.hh,.wh {
+  width: 30rpx;
+}
+
+.wh {
+  height: 73rpx;
+}
+
+button::after {
+  border: none;
+}
+
+.status {
+  width: 220rpx;
+}
+
+.row-below,.row-up {
+  border: unset!important;
+  height: 32rpx!important;
+  margin: unset!important;
+  width: 32rpx!important;
+}
+
+.status .fold {
+  color: #7ec37b;
+  font-family: PingFang SC;
+  font-size: 24rpx;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24rpx;
+}
+
+.status .fold text {
+  color: #999;
+}
+
+.status .tag {
+  background: #fff;
+  border: 1rpx solid #7ec37b;
+  border-radius: 96rpx;
+  color: #7ec37b;
+  font-family: PingFang SC;
+  font-size: 24rpx;
+  font-style: normal;
+  font-weight: 400;
+  height: 44rpx;
+  margin-right: 12rpx;
+  padding: 0 28rpx;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#userinfo{
+  width: 135rpx;
+  height:135rpx;
+  margin-left: 20rpx;
+  border-radius:50%;
+  display: flex;
+  overflow:hidden;
+  margin-top: 30rpx;
+  text-align: center;
+}

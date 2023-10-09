@@ -1,0 +1,15 @@
+<view class="page">
+    <view class="search">
+        <my-search bind:clear="clearSearch" bind:confirm="confirmSearch" bind:input="changeSearch" placeholder="请输入关键字搜索"></my-search>
+    </view>
+
+
+
+    <view class="search_result">
+      
+        <view class="nodata" >
+            <image src="/assets/img/Group.png"></image>
+            <view class="text">暂无通知内容</view>
+        </view>
+    </view>
+</view>

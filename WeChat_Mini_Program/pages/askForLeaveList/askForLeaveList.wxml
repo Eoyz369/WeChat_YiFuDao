@@ -1,0 +1,65 @@
+<!--pages/askForLeaveList/askForLeaveList.wxml-->
+<view class="page">
+    <view class="header">
+        <van-dropdown-menu activeColor="#7EC37B">
+            <van-dropdown-item  options="{{option1}}" value="{{value2}}"></van-dropdown-item>
+            <van-dropdown-item  options="{{option2}}" value="{{value2}}"></van-dropdown-item>
+        </van-dropdown-menu>
+    </view>
+    <view class="search_result" >
+        <view wx:for="{{Afls}}" wx:key="newAfls">
+            <view wx:if="{{index===0}}" bindtap="toDetail" class="commonWrap" >
+                <view class="title">
+                    <text >请假申请</text>   
+                </view>
+                <view  class="slotCont m-singleLr-md" slot="slotContent">
+                    <view class="lt">
+                        <view class="gray-txt block ellips" style="width:493rpx">请假原因：<text class="red-txt">{{item.leaveForReason}}</text>
+                        </view>
+                        <view class="gray-txt block">开始时间：<text class="default-txt">{{item.beginTimeFormat}}</text>
+                        </view>
+                        <view class="gray-txt block">结束时间：<text class="default-txt">{{item.endTimeFormat}}</text>
+                        </view>
+                    </view>
+                    <view class="rt">
+                        <image src="https://meeting-image-1257318859.cos.ap-beijing.myqcloud.com/htmlImages/yfd/student/postmark/pic-4.png"  ></image>
+                    </view>
+                </view>
+            </view>
+
+            <view wx:else bindtap="toClearStore" class="commonWrap" >
+                <view class="title">
+                    <text >请假申请</text>
+                   
+                </view>
+                <view  class="slotCont m-singleLr-md" slot="slotContent">
+                    <view class="lt">
+                        <view class="gray-txt block ellips" style="width:493rpx">请假原因：<text class="red-txt">{{item.leaveForReason}}</text>
+                        </view>
+                        <view class="gray-txt block">开始时间：<text class="default-txt">{{item.beginTimeFormat}}</text>
+                        </view>
+                        <view class="gray-txt block">结束时间：<text class="default-txt">{{item.endTimeFormat}}</text>
+                        </view>
+                    </view>
+                    <view class="rt">
+                        
+                        <image src="https://meeting-image-1257318859.cos.ap-beijing.myqcloud.com/htmlImages/yfd/student/postmark/pic-99.png" ></image>
+                    </view>
+                </view>
+            </view>
+            
+        </view>
+
+
+    </view>
+
+
+    
+    <view class="botton_area">
+        <view bindtap="toApplication" class="botton_item" >
+            <image src="https://meeting-image-1257318859.cos.ap-beijing.myqcloud.com/htmlImages/yfd/student/review/icon-apply-leave.png"></image>
+            <text>请假申请</text>
+        </view>
+    </view>
+</view>
+
