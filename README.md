@@ -9,7 +9,7 @@
 
 ### [小程序](https://github.com/Eoyz369/Fake_YiFuDao/tree/main/Wechat_Mini_Program)版本说明  
 【1.1】
-新增自定义轮播图片[[下载]](https://github.com/Eoyz369/WeChat_YiFuDao/releases/tag/V1.1)
+新增自定义轮播图片[[下载]](https://github.com/Eoyz369/WeChat_YiFuDao/releases/tag/V1.1)   
 【0.9】
 完善请假条列表显示、完善请假条数据显示   
 【0.6】
