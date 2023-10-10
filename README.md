@@ -31,7 +31,7 @@
 【Quantumult_X重写】[[使用]](https://raw.githubusercontent.com/Eoyz369/Rule_Apple/main/QuantumultX/rewrite/YiFuDao.conf)     
 
 
-### 引用模块
+### 开放源代码许可   
 [Vant_Weapp](https://github.com/youzan/vant-weapp)、[ColorUI](https://github.com/weilanwl/coloruicss)
 
 
