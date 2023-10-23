@@ -3,8 +3,8 @@
 仿奕辅导做的一个微信小程序     
 
 ## 免责声明   
-仅供学习！   
-不能做其他用途！请遵守当地的法律法规!
+仅供学习，下载后需在24小时内删除！   
+请遵守当地的法律法规!
 
 
 ### [小程序](https://github.com/Eoyz369/Fake_YiFuDao/tree/main/Wechat_Mini_Program)版本说明  
