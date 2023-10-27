@@ -27,8 +27,8 @@
 ### [IOS_重写](https://github.com/Eoyz369/WeChat_YiFuDao/tree/main/IOS_Scripts)说明   
 【1.0】完善二维码显示，完善批假时间显示   
 *请假申请列表需要有一次数据。   
-【Shadowrocket模块】[[使用]](https://raw.githubusercontent.com/Eoyz369/Rule_Apple/main/Shadowrocket/module/YiFuDao.module)    
-【Quantumult_X重写】[[使用]](https://raw.githubusercontent.com/Eoyz369/Rule_Apple/main/QuantumultX/rewrite/YiFuDao.conf)     
+【Shadowrocket模块】[[使用]](https://raw.githubusercontent.com/Eoyz369/Rule_Config/main/Shadowrocket/module/YiFuDao.module)    
+【Quantumult_X重写】[[使用]](https://raw.githubusercontent.com/Eoyz369/Rule_Config/main/QuantumultX/rewrite/YiFuDao.conf)     
 
 
 ### 开放源代码许可   
