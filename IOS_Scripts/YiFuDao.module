@@ -6,16 +6,16 @@
 [Script]
 
 # 列表
-list = type=http-response,pattern=^https://yfd\.ly-sky\.com/ly-ms/application/api/oa/applyList,requires-body=1,max-size=3145728,script-path=https://raw.githubusercontent.com/Eoyz369/Rule_Apple/main/JavaScript/YiFuDao/list.js,script-update-interval=0
+list = type=http-response,pattern=^https://yfd\.ly-sky\.com/ly-ms/application/api/oa/applyList,requires-body=1,max-size=3145728,script-path=https://raw.githubusercontent.com/Eoyz369/Rule_Config/main/JavaScript/YiFuDao/list.js,script-update-interval=0
 
 # 详情
-detail = type=http-response,pattern=https://yfd\.ly-sky\.com/ly-ms/application/api/oa/detail/*,requires-body=1,max-size=3145728,script-path=https://raw.githubusercontent.com/Eoyz369/Rule_Apple/main/JavaScript/YiFuDao/detail.js,script-update-interval=0
+detail = type=http-response,pattern=https://yfd\.ly-sky\.com/ly-ms/application/api/oa/detail/*,requires-body=1,max-size=3145728,script-path=https://raw.githubusercontent.com/Eoyz369/Rule_Config/JavaScript/YiFuDao/detail.js,script-update-interval=0
 
 # 我的
-status = type=http-response,pattern=^https://yfd\.ly-sky\.com/ly-ms/application/api/st/mine/oa/status,requires-body=1,max-size=3145728,script-path=https://raw.githubusercontent.com/Eoyz369/Rule_Apple/main/JavaScript/YiFuDao/status.js,script-update-interval=0
+status = type=http-response,pattern=^https://yfd\.ly-sky\.com/ly-ms/application/api/st/mine/oa/status,requires-body=1,max-size=3145728,script-path=https://raw.githubusercontent.com/Rule_Config/main/JavaScript/YiFuDao/status.js,script-update-interval=0
 
 # 出入二维码
-baseInfo = type=http-response,pattern=^https://yfd\.ly-sky\.com/ly-ms/application/api/st/mine/inAndOutQrCode/baseInfo,requires-body=1,max-size=3145728,script-path=https://raw.githubusercontent.com/Eoyz369/Rule_Apple/main/JavaScript/YiFuDao/baseInfo.js,script-update-interval=0
+baseInfo = type=http-response,pattern=^https://yfd\.ly-sky\.com/ly-ms/application/api/st/mine/inAndOutQrCode/baseInfo,requires-body=1,max-size=3145728,script-path=https://raw.githubusercontent.com/Eoyz369/Rule_Config/main/JavaScript/YiFuDao/baseInfo.js,script-update-interval=0
 
 [MITM]
 
