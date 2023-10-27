@@ -36,5 +36,9 @@
 
 
 ### 访问量
-![Visitor Count](https://profile-counter.glitch.me/WeChat_YiFuDao/count.svg)
+![Visitor Count](https://profile-counter.glitch.me/WeChat_YiFuDao/count.svg)   
+
+### Star记录
+
+[![Stargazers over time](https://starchart.cc/Eoyz369/WeChat_YiFuDao.svg)](https://github.com/Eoyz369/WeChat_YiFuDao) 
 
