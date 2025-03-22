@@ -1,4 +1,4 @@
-# WeChat_YiFuDao
+# 微信易辅导 WeChat_YiFuDao
 仿奕辅导做的一个微信小程序     
 
 ## 免责声明   
@@ -7,6 +7,9 @@
 
 
 ### [小程序](https://github.com/Eoyz369/WeChat_YiFuDao/tree/main/Wechat_Mini_Program)版本说明  
+
+【1.3】
+完善是否出校的功能显示[[下载]](https://github.com/Eoyz369/WeChat_YiFuDao/releases/tag/V1.3)   
 【1.2】
 优化部分代码[[下载]](https://github.com/Eoyz369/WeChat_YiFuDao/releases/tag/V1.2)   
 【1.1】
