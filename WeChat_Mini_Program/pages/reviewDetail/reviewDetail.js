@@ -39,6 +39,15 @@ Page({
         })
       }
     });
+    var aFSL = wx.getStorage({
+      key:'aFSL',
+      success:function (aFSL) {
+        console.log(aFSL);
+        that.setData({
+          askForLeaveSchoolConfigs: aFSL.data,// <!-- 是否离校 -->// <!-- askForLeaveSchoolConfigs -->
+        })
+      }
+    });
     this.setData({
       beginTimeFormat: mesg.beginTimeFormat,// <!-- 离校时间 -->// <!-- beginTimeFormat -->
       endTimeFormat: mesg.endTimeFormat,// <!-- 返校时间 -->// <!-- endTimeFormat -->

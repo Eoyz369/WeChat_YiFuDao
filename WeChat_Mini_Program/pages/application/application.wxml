@@ -105,16 +105,16 @@
     </view>
 
 <!-- 是否出校 -->
-    <!-- <view class="form-item">
+    <view class="form-item">
         <view class="label">
             <text class="must">*</text>是否出校</view>
-        <view class="stick" style="padding:15rpx 30rpx">
-            <van-radio-group  direction="horizontal" >
-                <van-radio checkedColor="#7EC37B" iconSize="16" name="1">是</van-radio>
-                <van-radio checkedColor="#7EC37B" iconSize="16" name="0">否</van-radio>
-            </van-radio-group>
+            <view class="stick">     
+            <picker   range-key="name"  bindchange="showPickerSchoolType" value="{{askForLeaveSchoolConfigs}}" range="{{showLeaveSchool}}" mode = "selector">
+              <van-cell  name="askForLeaveConfigs" class="m-picker-lable" title=" {{showLeaveSchool[askForLeaveSchoolConfigs].name||'请选择是否出校'}}" is-link>
+              </van-cell>
+            </picker>
         </view>
-    </view> -->
+    </view>
 
         <!-- 校领导姓名 -->
 <!-- schoolAuthorityName -->

@@ -24,7 +24,7 @@
     </view>
     <view class="form-item" >
         <view class="label gray-txt">是否出校</view>
-        <view class="stick">是</view>
+        <view class="stick">{{askForLeaveSchoolConfigs}} </view>
     </view>
     <view class="form-item" >
         <view class="label gray-txt">请假原因</view>

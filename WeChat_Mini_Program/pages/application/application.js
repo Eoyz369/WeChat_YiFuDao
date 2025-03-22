@@ -42,23 +42,44 @@ Page({
       name: '测试'
     },
   ],
- // 请假类型 
+    // 是否离校
+    showLeaveSchool:[
+      {
+        id: 0,
+        name: '是'
+      },
+      {
+        id: 1,
+        name: '否'
+      },
+    ] ,
+    // 请假类型 
    showLeaveType:[
     {
       id: 0,
-      name: '事假'
+      name: '测试'
     },
     {
       id: 1,
-      name: '病假'
+      name: '事假'
     },
     {
       id: 2,
-      name: '测试'
+      name: '事假(不离校)'
     },
+    {
+      id: 3,
+      name: '病假'
+    },
+    {
+      id: 3,
+      name: '病假(不离校)'
+    },
+    
 
   ],
    askForLeaveConfigs: !1,
+   askForLeaveSchoolConfigs: !1,
 
    minHour: 0,
    maxHour: 24,
@@ -155,6 +176,7 @@ Page({
     console.log("选中的name值:"+sss)
     this.setData({
       askForLeaveConfigs: e.detail.value,
+      
     })
     // console.log(JSON.stringify(data));
     wx.setStorage({
@@ -168,6 +190,26 @@ Page({
     })
 
   },
+
+
+  showPickerSchoolType: function (e) {
+    var that = this;
+    console.log(e)
+    console.log("选中的name值:"+that.data.showLeaveSchool[e.detail.value].name);
+    var sssc =that.data.showLeaveSchool[e.detail.value].id;
+    console.log("选中的name值:"+sssc)
+    this.setData({
+      askForLeaveSchoolConfigs: e.detail.value,
+      
+    })
+    // console.log(JSON.stringify(data));
+    wx.setStorage({
+      key:'aFSL',
+      data:that.data.showLeaveSchool[e.detail.value].name,
+    })
+
+  },
+
 
 
 
