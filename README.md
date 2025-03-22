@@ -1,4 +1,4 @@
-# 微信易辅导 WeChat_YiFuDao
+# WeChat_YiFuDao
 仿奕辅导做的一个微信小程序     
 
 ## 免责声明   
