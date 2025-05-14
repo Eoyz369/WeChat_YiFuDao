@@ -8,6 +8,8 @@
 
 ### [小程序](https://github.com/Eoyz369/WeChat_YiFuDao/tree/main/Wechat_Mini_Program)版本说明  
 
+【1.4】
+修复时间的细节显示[[下载]](https://github.com/Eoyz369/WeChat_YiFuDao/releases/tag/V1.4)   
 【1.3】
 完善是否出校的功能显示[[下载]](https://github.com/Eoyz369/WeChat_YiFuDao/releases/tag/V1.3)   
 【1.2】
